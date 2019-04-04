@@ -35,7 +35,8 @@ axis_map = {
 #    "5Å" : "rcutoff5A",
 #}
 
-desc = Div(text=open(join(dirname(__file__), "description.html")).read(), width=800)
+desc = Div(text=open(join(dirname(__file__), "index.html")).read(), width=800)
+# desc = Div(text=open(join(dirname(__file__), "description.html")).read(), width=800)
 
 # Create Input controls
 number = Slider(title="Number Cutoff", value=0, start=0, end=4, step=0.1)
@@ -137,7 +138,7 @@ sizing_mode = 'fixed'
 
 inputs = column(*controls, sizing_mode=sizing_mode)
 l = layout([
-    [desc],
+    # [desc],
     [inputs, p],
 ], sizing_mode=sizing_mode)
 
